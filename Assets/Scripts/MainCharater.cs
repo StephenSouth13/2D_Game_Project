@@ -106,6 +106,7 @@ public class MainCharacter : MonoBehaviour
     {
         float currentSpeed = isRunning ? moveSpeed * runMultiplier : moveSpeed;
         rb.linearVelocity = new Vector2(movement.x * currentSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
         if (debugMode)
         {
