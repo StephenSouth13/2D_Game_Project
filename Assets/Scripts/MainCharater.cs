@@ -2,13 +2,13 @@
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class MainCharacter : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float runMultiplier = 1.8f;
     public float jumpForce = 7f;
-    public SpriteRenderer spriteRenderer;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -19,17 +19,20 @@ public class MainCharacter : MonoBehaviour
     public bool debugMode = true;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private PlayerControls controls;
     private Vector2 movement;
     private bool isGrounded;
     private bool isRunning = false;
 
-    private PlayerControls controls;
-
+    [Header("Bắn đạn")]
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     void Awake()
     {
         controls = new PlayerControls();
 
-        // Di chuyển
+        // Di chuyển ngang
         controls.Player.Move.performed += ctx =>
         {
             movement = ctx.ReadValue<Vector2>();
@@ -39,7 +42,7 @@ public class MainCharacter : MonoBehaviour
             movement = Vector2.zero;
         };
 
-        // Nhảy
+        // Nhảy khi đang trên mặt đất
         controls.Player.Jump.performed += ctx =>
         {
             if (isGrounded)
@@ -49,41 +52,50 @@ public class MainCharacter : MonoBehaviour
             }
         };
 
-        // Chạy nhanh (giữ Shift)
+        // Chạy nhanh khi giữ Shift
         controls.Player.Run.performed += ctx => isRunning = true;
         controls.Player.Run.canceled += ctx => isRunning = false;
+
+        controls.Player.Fire.performed += ctx => Shoot();
     }
 
-    void OnEnable() => controls.Enable();
-    void OnDisable() => controls.Disable();
+    void OnEnable()
+    {
+        if (controls == null) controls = new PlayerControls();
+        controls.Enable();
+    }
+
+    void OnDisable()
+    {
+        if (controls != null) controls.Disable();
+    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Nếu chưa gán SpriteRenderer trong Inspector, tự tìm
-        if (spriteRenderer == null)
+        // Kiểm tra groundCheck đã được gán chưa
+        if (groundCheck == null)
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            Debug.LogError("⚠️ Thiếu groundCheck! Gán điểm kiểm tra tiếp đất trong Inspector.");
         }
     }
 
     void Update()
     {
         // Kiểm tra tiếp đất
-        isGrounded = Physics2D.OverlapCircle(
-            groundCheck.position,
-            groundCheckRadius,
-            groundLayer
-        );
+        if (groundCheck != null)
+        {
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        }
 
-        // Xoay hướng nhân vật theo chiều x
+        // Quay đầu theo chiều di chuyển
         if (spriteRenderer != null && movement.x != 0)
         {
             spriteRenderer.flipX = movement.x < 0;
         }
 
-        // Debug hướng đi
         if (debugMode && movement.x != 0)
         {
             Debug.Log("Đang di chuyển: " + (movement.x > 0 ? "Phải" : "Trái"));
@@ -98,6 +110,14 @@ public class MainCharacter : MonoBehaviour
         if (debugMode)
         {
             Debug.Log("Vận tốc hiện tại: " + rb.linearVelocity);
+        }
+    }
+    void Shoot()
+    {
+        if (bulletPrefab != null && firePoint != null)
+        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            if (debugMode) Debug.Log("Bắn đạn!");
         }
     }
 }
