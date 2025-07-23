@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: eb2a138e48103ae4fbca5ff1795f7575
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -109455247176330722
+    second: vecteezy_square-buttons-with-different-textures_14070918_0
+  - first:
+      213: -6331414215980559466
+    second: vecteezy_square-buttons-with-different-textures_14070918_1
+  - first:
+      213: -2026489728084523174
+    second: vecteezy_square-buttons-with-different-textures_14070918_2
+  - first:
+      213: -1019331653591284668
+    second: vecteezy_square-buttons-with-different-textures_14070918_3
+  - first:
+      213: -5443442448785612220
+    second: vecteezy_square-buttons-with-different-textures_14070918_4
+  - first:
+      213: 4178181149326696004
+    second: vecteezy_square-buttons-with-different-textures_14070918_5
+  - first:
+      213: -7230960030909832953
+    second: vecteezy_square-buttons-with-different-textures_14070918_6
+  - first:
+      213: -8540747586787218075
+    second: vecteezy_square-buttons-with-different-textures_14070918_7
+  - first:
+      213: -6690762055549941398
+    second: vecteezy_square-buttons-with-different-textures_14070918_8
+  - first:
+      213: -8723641153350168976
+    second: vecteezy_square-buttons-with-different-textures_14070918_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 395
+        width: 269
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12904958032b7ef0800000000000000
+      internalID: -109455247176330722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_1
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 395
+        width: 268
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693de9ad05c4228a0800000000000000
+      internalID: -6331414215980559466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 396
+        width: 268
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a574b80445670e3e0800000000000000
+      internalID: -2026489728084523174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_3
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 395
+        width: 270
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444416ff24b9ad1f0800000000000000
+      internalID: -1019331653591284668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_4
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 395
+        width: 272
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442e9d4fee10574b0800000000000000
+      internalID: -5443442448785612220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_5
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 62
+        width: 269
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ed9dc4e91ebf930800000000000000
+      internalID: 4178181149326696004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_6
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 62
+        width: 268
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7016294c92876ab90800000000000000
+      internalID: -7230960030909832953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_7
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 62
+        width: 276
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56de545125b297980800000000000000
+      internalID: -8540747586787218075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_8
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 62
+        width: 268
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6988421c53a523a0800000000000000
+      internalID: -6690762055549941398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vecteezy_square-buttons-with-different-textures_14070918_9
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 62
+        width: 272
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e859247966fe680800000000000000
+      internalID: -8723641153350168976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vecteezy_square-buttons-with-different-textures_14070918_0: -109455247176330722
+      vecteezy_square-buttons-with-different-textures_14070918_1: -6331414215980559466
+      vecteezy_square-buttons-with-different-textures_14070918_2: -2026489728084523174
+      vecteezy_square-buttons-with-different-textures_14070918_3: -1019331653591284668
+      vecteezy_square-buttons-with-different-textures_14070918_4: -5443442448785612220
+      vecteezy_square-buttons-with-different-textures_14070918_5: 4178181149326696004
+      vecteezy_square-buttons-with-different-textures_14070918_6: -7230960030909832953
+      vecteezy_square-buttons-with-different-textures_14070918_7: -8540747586787218075
+      vecteezy_square-buttons-with-different-textures_14070918_8: -6690762055549941398
+      vecteezy_square-buttons-with-different-textures_14070918_9: -8723641153350168976
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

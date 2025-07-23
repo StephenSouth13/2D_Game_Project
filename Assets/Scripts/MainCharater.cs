@@ -8,6 +8,7 @@ public class MainCharacter : MonoBehaviour
     public float moveSpeed = 5f;
     public float runMultiplier = 1.8f;
     public float jumpForce = 7f;
+    public SpriteRenderer spriteRenderer;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -59,16 +60,30 @@ public class MainCharacter : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // Nếu chưa gán SpriteRenderer trong Inspector, tự tìm
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
     }
 
     void Update()
     {
+        // Kiểm tra tiếp đất
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
             groundCheckRadius,
             groundLayer
         );
 
+        // Xoay hướng nhân vật theo chiều x
+        if (spriteRenderer != null && movement.x != 0)
+        {
+            spriteRenderer.flipX = movement.x < 0;
+        }
+
+        // Debug hướng đi
         if (debugMode && movement.x != 0)
         {
             Debug.Log("Đang di chuyển: " + (movement.x > 0 ? "Phải" : "Trái"));
