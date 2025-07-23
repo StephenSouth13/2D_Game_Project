@@ -6,6 +6,7 @@ public class MainCharacter : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 5f;
+    public float runMultiplier = 1.8f;
     public float jumpForce = 7f;
 
     [Header("Ground Check")]
@@ -19,6 +20,7 @@ public class MainCharacter : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool isGrounded;
+    private bool isRunning = false;
 
     private PlayerControls controls;
 
@@ -26,7 +28,7 @@ public class MainCharacter : MonoBehaviour
     {
         controls = new PlayerControls();
 
-        // Di chuyển ngang
+        // Di chuyển
         controls.Player.Move.performed += ctx =>
         {
             movement = ctx.ReadValue<Vector2>();
@@ -45,6 +47,10 @@ public class MainCharacter : MonoBehaviour
                 if (debugMode) Debug.Log("Nhảy!");
             }
         };
+
+        // Chạy nhanh (giữ Shift)
+        controls.Player.Run.performed += ctx => isRunning = true;
+        controls.Player.Run.canceled += ctx => isRunning = false;
     }
 
     void OnEnable() => controls.Enable();
@@ -71,7 +77,8 @@ public class MainCharacter : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+        float currentSpeed = isRunning ? moveSpeed * runMultiplier : moveSpeed;
+        rb.linearVelocity = new Vector2(movement.x * currentSpeed, rb.linearVelocity.y);
 
         if (debugMode)
         {
