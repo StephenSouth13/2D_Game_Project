@@ -58,7 +58,7 @@ public class SpinWheel : MonoBehaviour
     void AwardReward()
     {
         float angle = wheelTransform.eulerAngles.z % 360f;
-        int segment = Mathf.FloorToInt(angle / (360f / 8)); // Nếu 8 phần thưởng
+        int segment = Mathf.FloorToInt(angle / (360f / 8));//Phân chia cho 12 ô
         int reward = GetRewardBySegment(segment);
         totalPoint += reward;
         pointText.text = "+" + reward.ToString();
@@ -72,7 +72,7 @@ public class SpinWheel : MonoBehaviour
 
     void UpdateUI()
     {
-        totalPointText.text = "Total Point: " + totalPoint.ToString();
+        totalPointText.text = "Total Point/Spin: " + totalPoint.ToString();
         spinCountText.text = "Spins Left: " + spinCount.ToString();
     }
 }
